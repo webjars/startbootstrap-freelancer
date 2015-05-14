@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>startbootstrap-freelancer</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
     <name>Start Bootstrap - Freelancer</name>
     <description>WebJar for Start Bootstrap - Freelancer</description>
     <url>http://webjars.org</url>
@@ -47,7 +47,7 @@
         <url>http://github.com/webjars/startbootstrap-freelancer</url>
         <connection>scm:git:https://github.com/webjars/startbootstrap-freelancer.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/startbootstrap-freelancer.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>startbootstrap-freelancer-1.0.3</tag>
     </scm>
     
     <build>
@@ -62,13 +62,13 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="download archive"/>
-                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip"/>
-                                <echo message="unzip archive"/>
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
-                                <echo message="moving resources"/>
+                                <echo message="download archive" />
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" />
+                                <echo message="unzip archive" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}"/>
+                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}" />
                                 </move>
                             </target>
                         </configuration>
